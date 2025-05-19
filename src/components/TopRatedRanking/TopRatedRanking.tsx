@@ -15,9 +15,10 @@ interface Movie {
 
 interface TopRatedRankingProps {
   movies: Movie[];
+  startIndex?: number;
 }
 
-const TopRatedRanking = ({ movies }: TopRatedRankingProps) => {
+const TopRatedRanking = ({ movies, startIndex = 1 }: TopRatedRankingProps) => {
   return (
     <div className="toprated-container">
       <div className="toprated-header">
@@ -44,7 +45,7 @@ const TopRatedRanking = ({ movies }: TopRatedRankingProps) => {
             }}
             className="toprated-item hover:cursor-pointer"
           >
-            <span className="toprated-rank">{index + 1}</span>
+            <span className="toprated-rank">{startIndex + index}</span>
             <Image
               src={`${Config.IMAGE_SOURCE}${movie.poster_path}`}
               alt={movie.title}

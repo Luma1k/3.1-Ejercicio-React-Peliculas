@@ -30,7 +30,7 @@ const TopRatedMoviesPage = () => {
       <Header />
       <div className="toprated-section">
         <h2 className="page-title">⭐ Top Rated Movies</h2>
-        <TopRatedRanking movies={movies} />
+        <TopRatedRanking movies={movies} startIndex={(page - 1) * 20 + 1} />
         <div className="mt-10">
           <PaginationControls
             page={page}
