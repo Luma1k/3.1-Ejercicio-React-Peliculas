@@ -9,7 +9,7 @@ import MovieCard from "@/components/MovieCard/MovieCard";
 import Link from "next/link";
 
 const FavoritesPage = () => {
-  const { guestSessionId } = useGuestSession();
+  const { guestSessionId } = useGuestSession(); 
   const [favorites, setFavorites] = useState<Movie[]>([]);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const FavoritesPage = () => {
     };
 
     fetchFavorites();
-  }, []);
+  }, [guestSessionId]); 
 
   return (
     <div className="bg-[#0f172a] min-h-screen text-white">

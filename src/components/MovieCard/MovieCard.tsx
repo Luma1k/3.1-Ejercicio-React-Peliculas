@@ -28,7 +28,7 @@ const MovieCard: React.FC<MovieCardInterface> = ({
         src={photo}
         width={290}
         height={390}
-        alt={title}
+        alt="Estrella"
         className="w-full h-[390px] object-cover rounded-t-3xl"
       />
 
@@ -36,7 +36,6 @@ const MovieCard: React.FC<MovieCardInterface> = ({
         <p className="pt-3 pb-1.5 group-hover:font-bold text-xl font-bold">{title}</p>
         <p className="pb-2 text-base text-gray-300">({year})</p>
 
-        {/* Estrellas caricaturescas */}
         <div className="flex justify-center gap-1 pb-1">
           {Array.from({ length: 5 }).map((_, i) => (
             <Image
@@ -51,7 +50,11 @@ const MovieCard: React.FC<MovieCardInterface> = ({
         </div>
 
         <p className="text-center text-yellow-400 text-lg font-[cursive] tracking-wide">
-          {score.toFixed(1)} / 10
+          {score.toFixed(1)} &#47; 10 
+        </p>
+
+        <p className="text-sm text-gray-400 mt-2 line-clamp-3">
+          {description.replace(/'/g, "&rsquo;").replace(/"/g, "&quot;")}
         </p>
       </div>
 
