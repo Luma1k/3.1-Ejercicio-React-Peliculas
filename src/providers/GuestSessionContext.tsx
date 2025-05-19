@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState, useCallback } from "react";
 import { getGuestSession } from "@/services/auth/getGuestSession";
 
 const GuestSessionContext = createContext<{
@@ -20,14 +20,13 @@ export const GuestSessionProvider = ({ children }: { children: React.ReactNode }
   };
 
   
-  const fetchGuestSession = async () => {
+  const fetchGuestSession = useCallback(async () => {
     const data = await getGuestSession();
     if (data.guest_session_id) {
       setGuestSessionId(data.guest_session_id);
     }
-  };
+  }, []);
 
-  
   useEffect(() => {
     const existingId = localStorage.getItem("guestSessionId");
     if (existingId) {
