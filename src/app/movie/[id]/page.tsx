@@ -56,8 +56,14 @@ const getRecommendations = async (id: string): Promise<Recommendation[]> => {
   }
 };
 
-//  ERROR AQUI 
-export default async function MovieDetailPage({ params }: { params: { id: string } }) {
+
+type PageProps = {
+  params: {
+    id: string;
+  };
+};
+
+export default async function MovieDetailPage({ params }: PageProps) {
   const id = params.id;
 
   const movie = await getMovie(id);
