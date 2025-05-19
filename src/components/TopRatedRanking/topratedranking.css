@@ -1,0 +1,88 @@
+.toprated-container {
+  background-color: #0f172a;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.toprated-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.ranking-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.toprated-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.toprated-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #facc15;
+  letter-spacing: 1px;
+}
+
+.toprated-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.toprated-item {
+  background-color: #020d26;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toprated-item:hover {
+  transform: scale(1.02);
+  background-color: #1e3a8a;
+}
+
+.toprated-rank {
+  font-weight: bold;
+  color: #facc15;
+  font-size: 1.25rem;
+  width: 1.5rem;
+  text-align: center;
+}
+
+.toprated-poster {
+  width: 40px;
+  height: 60px;
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+
+.toprated-movie-title {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+  text-align: left;
+}
+
+.toprated-score {
+  color: #3b82f6;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+.toprated-item {
+  cursor: pointer;
+}

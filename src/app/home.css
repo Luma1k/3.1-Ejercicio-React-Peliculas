@@ -1,0 +1,55 @@
+
+.home-container {
+  background-color: #0f172a;
+  color: white;
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.home-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.home-subtitle {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin-top: 0.5rem;
+}
+
+.pill-zone {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.info-card {
+  background: #1e293b;
+  border: 2px solid #3b82f6;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  max-width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  border-color: #60a5fa;
+}
