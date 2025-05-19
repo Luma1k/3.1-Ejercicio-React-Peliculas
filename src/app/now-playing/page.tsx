@@ -10,7 +10,7 @@ import PaginationControls from "@/components/PaginationControls/PaginationContro
 const NowPlayingPage = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [page, setPage] = useState(1);
-  const totalPages = 508; // Puedes hacerlo dinámico más adelante
+  const totalPages = 508; 
 
   useEffect(() => {
     const fetchNowPlaying = async () => {
