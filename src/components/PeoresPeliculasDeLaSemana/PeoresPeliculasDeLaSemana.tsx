@@ -17,7 +17,7 @@ export default function PeoresPeliculasDeLaSemana({ movies }: Props) {
           <Link
             key={movie.id}
             href={`/movie/${movie.id}`}
-            className="min-w-[180px] flex-shrink-0 bg-[#1e293b] rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform"
+            className="min-w-[180px] max-w-[180px] flex-shrink-0 bg-[#1e293b] rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform"
           >
             <Image
               src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
@@ -27,7 +27,7 @@ export default function PeoresPeliculasDeLaSemana({ movies }: Props) {
               className="w-full h-[270px] object-cover"
             />
             <div className="p-3">
-              <h3 className="text-base font-semibold text-white line-clamp-1">
+              <h3 className="text-base font-semibold text-white truncate max-w-[160px]">
                 {movie.title}
               </h3>
               <p className="text-sm text-gray-400">({new Date(movie.release_date).getFullYear()})</p>

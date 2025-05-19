@@ -20,7 +20,7 @@ async function fetchMovies(type: string): Promise<Movie[]> {
 }
 
 function getWorstMovies(movies: Movie[]): Movie[] {
-  return [...movies].sort((a, b) => a.vote_average - b.vote_average).slice(0, 10);
+  return [...movies].sort((a, b) => a.vote_average - b.vote_average).slice(0, 19);
 }
 
 export default async function Home() {
@@ -56,4 +56,4 @@ export default async function Home() {
       </section>
     </div>
   );
-};
+}
