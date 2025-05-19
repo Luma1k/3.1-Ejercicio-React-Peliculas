@@ -19,6 +19,15 @@ export const GuestSessionProvider = ({ children }: { children: React.ReactNode }
     setGuestSessionIdState(id);
   };
 
+  
+  const fetchGuestSession = async () => {
+    const data = await getGuestSession();
+    if (data.guest_session_id) {
+      setGuestSessionId(data.guest_session_id);
+    }
+  };
+
+  
   useEffect(() => {
     const existingId = localStorage.getItem("guestSessionId");
     if (existingId) {
@@ -26,14 +35,7 @@ export const GuestSessionProvider = ({ children }: { children: React.ReactNode }
     } else {
       fetchGuestSession();
     }
-  }, []);
-
-  const fetchGuestSession = async () => {
-    const data = await getGuestSession();
-    if (data.guest_session_id) {
-      setGuestSessionId(data.guest_session_id);
-    }
-  };
+  }, [fetchGuestSession]);
 
   return (
     <GuestSessionContext.Provider value={{ guestSessionId, setGuestSessionId }}>
