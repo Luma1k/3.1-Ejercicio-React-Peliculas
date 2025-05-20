@@ -13,6 +13,7 @@
   margin-bottom: 1.5rem;
   justify-content: center;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .ranking-icon {
@@ -35,7 +36,7 @@
 
 .toprated-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 1rem;
 }
 
@@ -48,6 +49,7 @@
   gap: 0.75rem;
   transition: transform 0.2s;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .toprated-item:hover {
@@ -76,13 +78,14 @@
   font-weight: 500;
   color: white;
   text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
 }
 
 .toprated-score {
   color: #3b82f6;
   font-weight: bold;
   font-size: 0.95rem;
-}
-.toprated-item {
-  cursor: pointer;
-}
+};
