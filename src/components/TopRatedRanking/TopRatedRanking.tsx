@@ -30,7 +30,7 @@ const TopRatedRanking = ({ movies, startIndex = 1 }: TopRatedRankingProps) => {
           className="ranking-icon"
         />
         <div>
-          <h2 className="toprated-title text-xl md:text-2xl font-bold">TMDB TOP 20</h2>
+          <h2 className="toprated-title text-xl md:text-2xl font-bold">TMDB TOP </h2>
           <p className="toprated-subtitle text-sm md:text-base text-gray-400">CURRENT RANKING</p>
         </div>
       </div>
