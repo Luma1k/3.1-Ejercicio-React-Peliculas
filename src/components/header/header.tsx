@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className="bg-[#0f172a] text-white p-4 flex justify-between items-center shadow-md sticky top-0 z-50">
-      {/* Logo */}
+      
       <Link href="/" className="flex items-center gap-3 hover:opacity-90">
         <Image
           src="/furby.png"
@@ -43,7 +43,7 @@ const Header = () => {
         </Link>
       </nav>
 
-      {/* Menú móvil */}
+      
       {menuOpen && (
         <div className="absolute top-[72px] left-0 w-full bg-[#0f172a] flex flex-col items-start px-6 py-4 space-y-4 sm:hidden shadow-lg z-50">
           <Link href="/popular" className="hover:text-yellow-400" onClick={() => setMenuOpen(false)}>Popular Movies</Link>
